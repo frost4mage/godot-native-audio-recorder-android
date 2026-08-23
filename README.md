@@ -27,17 +27,20 @@ a standard 16-bit PCM `.wav` file.
 ## Installation
 
 1. Clone this repository.
-2. Open it in Android Studio and build the plugin: ./gradlew assembleDebug (or `assembleRelease` for a release build)
+2. Open it in Android Studio and build the plugin:
+./gradlew assembleDebug
+   (or `assembleRelease` for a release build)
 3. Copy the following into your Godot project's `res://addons/` folder:
   addons/GodotNativeAudioRecorder/
   bin/debug/GodotNativeAudioRecorder-debug.aar
   plugin.cfg
   export_plugin.gd
-  (`plugin.cfg` and `export_plugin.gd` come from `export_scripts_template/`
-  in this repo; the `.aar` comes from your Gradle build output.)
+   (`plugin.cfg` and `export_plugin.gd` come from `export_scripts_template/`
+   in this repo; the `.aar` comes from your Gradle build output.)
 
-  Alternatively, download a pre-built `.aar` from the
-  [Releases](../../releases) page instead of building it yourself.
+   Alternatively, download a pre-built `.aar` from the
+   [Releases](../../releases) page instead of building it yourself.
+
 4. In Godot: **Project → Project Settings → Plugins**, make sure
    `GodotNativeAudioRecorder` is enabled.
 5. In **Project → Export → (your Android preset) → Plugins**, tick
@@ -91,6 +94,13 @@ func _on_recording_error(reason: String) -> void:
 - Output is always 16-bit PCM WAV.
 - Requires a real device to test (the microphone won't work in an
   emulator without a configured virtual audio input).
+
+## Contributing / Issues
+
+Bug reports, feature requests, and pull requests are welcome — please
+open an [issue](../../issues) or a PR. If you run into a device-specific
+problem, including the device model and Android version in your report
+helps a lot.
 
 ## License
 
